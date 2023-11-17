@@ -11855,25 +11855,26 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-.carousel-indicators {
-  bottom: -40px;
+body {
+  height: 100%;
+  background: rgb(255, 211, 78);
+  background: linear-gradient(90deg, rgb(255, 211, 78) 0%, rgb(255, 159, 118) 100%);
 }
 
 cite {
   font-size: 0.9rem;
 }
 
-.container {
+@media (min-width: 576px) {
+  .container {
+    max-width: 576px;
+  }
+}
+.container--adjustments {
   padding: 40px 0;
   background-color: white;
   margin-top: 20px;
   border-radius: 5px;
-}
-
-body {
-  height: 100%;
-  background: rgb(255, 211, 78);
-  background: linear-gradient(90deg, rgb(255, 211, 78) 0%, rgb(255, 159, 118) 100%);
 }
 
 .fa-quote-left {
@@ -11881,6 +11882,10 @@ body {
   font-size: 1.5rem;
   float: left;
   margin-right: 10px;
+}
+
+.carousel-indicators {
+  bottom: -40px;
 }
 
 .carousel-item__wrapper {

@@ -1,17 +1,4 @@
-.carousel-indicators {
-	bottom: -40px;
-}
-
-cite {
-	font-size: 0.9rem;
-}
-
-.container {
-	padding: 40px 0;
-	background-color: white;
-	margin-top: 20px;
-	border-radius: 5px;
-}
+@use "sass:map";
 
 body {
 	height: 100%;
@@ -19,11 +6,32 @@ body {
 	background: linear-gradient(90deg, rgba(255, 211, 78, 1) 0%, rgba(255, 159, 118, 1) 100%);
 }
 
+cite {
+	font-size: 0.9rem;
+}
+
+.container {
+	@include media-breakpoint-up(sm) {
+		max-width: map.get($grid-breakpoints, "sm");
+	}
+
+	&--adjustments {
+		padding: 40px 0;
+		background-color: white;
+		margin-top: 20px;
+		border-radius: 5px;
+	}
+}
+
 .fa-quote-left {
 	color: #ebcb00;
 	font-size: 1.5rem;
 	float: left;
 	margin-right: 10px;
+}
+
+.carousel-indicators {
+	bottom: -40px;
 }
 
 .carousel-item {
