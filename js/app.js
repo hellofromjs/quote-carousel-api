@@ -1,4 +1,3 @@
-
 const quotes_count = 3;
 let quotes;
 
